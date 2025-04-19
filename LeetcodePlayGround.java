@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.solocoding.leetcodeplayground;
 
 import java.util.Arrays;
@@ -14,39 +10,31 @@ public class LeetcodePlayGround {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        int [] nums  = {4, 2, 4, 3}; 
-       int [] nums2 =  {3,2,2,3}; 
+        int[] nums = {4, 2, 4, 3};
+        int[] nums2 = {3, 2, 2, 3};
         //System.out.println(removeElement(nums, 4));
-         //System.out.println(removeElement(nums2, 3));
-             System.out.println(removeElement(new int [0], 3));
-        //removeElement(nums, 4);
-    }
-    public static int removeElement(int[] nums, int val) {
-        int sum =  nums.length-1; 
-       // int i = 0; 
-     for (int i = 0; i <= sum; i++)
-        {
-           System.out.println((nums[i] == val) + "nums[i]: " + nums[i]+ "val : " + val);
-            if (nums[i] == val){
-//               if (sum > i ){
-                int val2 = nums[sum]; 
-                nums[sum--] = -1; 
-               
-                System.out.println("val2 : "+ val2);
-                nums[i] = val2; 
-                i  = -1; 
-            }
-      
-            System.out.println(Arrays.toString(nums) + " sum : "+ sum);
-       
+        //System.out.println(removeElement(nums2, 3));
+        System.out.println(removeElement(new int[0], 3));
 
-            
+    }
+
+    public static int removeElement(int[] nums, int val) {
+        int sum = nums.length - 1;
+
+        for (int i = 0; i <= sum; i++) {
+    
+            if (nums[i] == val) {
+                int val2 = nums[sum];
+                nums[sum--] = -1;
+                nums[i] = val2;
+                i = -1;
+            }
 
         }
-        return sum+1 ; 
-        
+        return sum + 1;
+
     }
-    
+
 }
 
 /**
